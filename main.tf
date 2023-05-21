@@ -15,6 +15,7 @@ data "aws_ami" "app_ami" {
 }
 
 module "blog_vpc" {
+
   source = "terraform-aws-modules/vpc/aws"
 
   name = "dev"
@@ -53,3 +54,4 @@ module "blog_sg" {
   egress_rules = ["all-all"]
   egress_cidr_blocks = ["0.0.0.0/0"]
 }
+
